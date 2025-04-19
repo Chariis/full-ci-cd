@@ -10,6 +10,7 @@ pipeline {
 	stages {
 		stage('Checkout Github'){
 			steps {
+				git branch: 'main', credentialsId: 'jenkins-access', url: 'https://github.com/Chariis/full-ci-cd.git'
 				echo 'cloning github repo...'
 			}
 		}		
